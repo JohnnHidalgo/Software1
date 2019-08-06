@@ -1,5 +1,6 @@
 import 'package:basic/models/people.dart';
 import 'package:basic/screens/addPeopleView.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class AddPeopleButton extends StatelessWidget{
@@ -9,24 +10,18 @@ class AddPeopleButton extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Container(
-        width: 80.0,
-        height: 40.0,
-        child: InkWell(
-          splashColor: Colors.tealAccent,
-          highlightColor: Colors.tealAccent,
-          borderRadius: BorderRadius.circular(20.0),
-          child: Center(
-            child: Text('Add'),
-          ),
-          onTap: (){
-            Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context)=> AddPeople(listPeople))
-            );
-          },
-        ),
+    return Padding(
+      padding: EdgeInsets.only(left: 72.0,right: 72.0),
+      child: CupertinoButton(
+        child: const Text('Add'),
+        color: Colors.blue,
+        padding: EdgeInsets.all(16.0),
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context)=> AddPeople(listPeople))
+          );
+        },
       ),
     );
   }
