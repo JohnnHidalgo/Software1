@@ -49,9 +49,34 @@ class _PeopleView extends State<PeopleView>{
 
             CupertinoButton(
               child: Text('Delete'),
+
               onPressed:() {
-                lista.removeAt(index);
-                Navigator.pop(context);
+
+                showDialog(
+                  context: context,
+                  child: CupertinoAlertDialog(
+                    title: Text('Estas seguro de eliminar este contacto?'),
+                    content: new Text("This is my content"),
+                    actions: <Widget>[
+                      CupertinoDialogAction(
+                        isDefaultAction: true,
+                        child: Text("Yes"),
+                        onPressed:(){
+                          lista.removeAt(index);
+                          Navigator.pushNamed(context, '/Home');
+                        },
+                      ),
+                      CupertinoDialogAction(
+                        child: Text("No"),
+                        onPressed: (){
+                          Navigator.pop(context);
+                        },
+                      )
+                    ],
+                  ),
+                );
+
+
               }
             ),
 
