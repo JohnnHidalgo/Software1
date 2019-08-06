@@ -7,13 +7,20 @@ import 'package:flutter/material.dart';
 import 'addPeopleView.dart';
 
 class Home extends StatefulWidget{
+  List<People> listPeople;
+
+
+  Home(this.listPeople);
+
   @override
-  _Home createState() => _Home();
+  _Home createState() => _Home(listPeople);
 }
 
 class _Home extends State<Home>{
 
-  List<People> listPeople=[];
+  List<People> listPeople;
+
+  _Home(this.listPeople);
 
   @override
   Widget build(BuildContext context) {

@@ -7,8 +7,9 @@ class AddInput extends StatelessWidget{
   String _errorText;
   Icon _icon;
   FocusNode passFocus;
+  TextInputType textInputType;
 
-  AddInput(this.controller, this._validate, this._hintText, this._errorText, this._icon);
+  AddInput(this.controller, this._validate, this._hintText, this._errorText, this._icon, this.textInputType);
 
   @override
   Widget build(BuildContext context) {
@@ -22,6 +23,7 @@ class AddInput extends StatelessWidget{
         onSubmitted: (String valor){
           FocusScope.of(context).requestFocus(passFocus);
         },
+        keyboardType: textInputType,
         controller: controller,
         decoration: InputDecoration(
           border: new OutlineInputBorder(

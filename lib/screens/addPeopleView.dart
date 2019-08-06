@@ -21,10 +21,10 @@ class _AddPeople extends State<AddPeople> {
   String inputValue = "";
   bool _nvalidate = false;
   TextEditingController nController = new TextEditingController();
-
-
+  TextInputType nametextInputType = TextInputType.text;
   bool _nuvalidate = false;
   TextEditingController nuController = new TextEditingController();
+  TextInputType calltextInputType = TextInputType.number;
 
   @override
   Widget build(BuildContext context) {
@@ -39,8 +39,8 @@ class _AddPeople extends State<AddPeople> {
         child:Column(
           children: <Widget>[
             Padding(padding: EdgeInsets.all(8.0)),
-            AddInput(nController,_nvalidate,'Name','Introducir Nombre',Icon(Icons.people)),
-            AddInput(nuController,_nuvalidate,'Number','Introducir Numero',Icon(Icons.call)),
+            AddInput(nController,_nvalidate,'Name','Introducir Nombre',Icon(Icons.people),nametextInputType),
+            AddInput(nuController,_nuvalidate,'Number','Introducir Numero',Icon(Icons.call),calltextInputType),
             AddButton(lista,nController,nuController,_nvalidate,_nuvalidate),
 
           ],
