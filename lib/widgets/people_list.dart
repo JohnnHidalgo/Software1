@@ -19,7 +19,6 @@ class _PeopleList extends State <PeopleList> {
   Widget build(BuildContext context) {
     return Container(
       height: 600.0,
-      color: Colors.red,
         child: ListView.builder(
             itemCount: listPeople.length,
             itemBuilder: (context, int){
