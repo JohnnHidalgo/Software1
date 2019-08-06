@@ -1,6 +1,5 @@
 import 'package:basic/models/people.dart';
 import 'package:basic/widgets/people_list.dart';
-import 'package:basic/widgets/people_card.dart';
 import 'package:flutter/material.dart';
 
 import 'addPeopleView.dart';

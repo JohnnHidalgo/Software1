@@ -1,5 +1,4 @@
 import 'package:basic/models/people.dart';
-import 'package:basic/screens/home.dart';
 import 'package:flutter/material.dart';
 import 'package:toast/toast.dart';
 
