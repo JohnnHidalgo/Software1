@@ -1,6 +1,7 @@
 import 'package:basic/models/people.dart';
 import 'package:basic/widgets/add_button.dart';
 import 'package:basic/widgets/add_input.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class AddPeople extends StatefulWidget{
@@ -29,14 +30,8 @@ class _AddPeople extends State<AddPeople> {
   Widget build(BuildContext context) {
 
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Register',
-          style: TextStyle(
-            color: Colors.black,
-          ),
-        ),
-        backgroundColor: Colors.white,
-        elevation: 2.0,
+      appBar: CupertinoNavigationBar(
+        middle : Text('Register'),
       ),
       body: Container(
         color: Colors.white,

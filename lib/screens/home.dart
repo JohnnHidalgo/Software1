@@ -1,6 +1,7 @@
 import 'package:basic/models/people.dart';
 import 'package:basic/widgets/people_add_button.dart';
 import 'package:basic/widgets/people_list.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'addPeopleView.dart';
@@ -17,14 +18,8 @@ class _Home extends State<Home>{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Contacts',
-          style: TextStyle(
-            color: Colors.black,
-          ),
-        ),
-        backgroundColor: Colors.white,
-        elevation: 2.0,
+      appBar: CupertinoNavigationBar(
+        middle : Text('Home'),
       ),
 
       body:Container(
