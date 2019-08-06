@@ -1,11 +1,14 @@
 import 'package:basic/models/people.dart';
+import 'package:basic/screens/home.dart';
 import 'package:flutter/material.dart';
 
 class PeopleCard extends StatelessWidget{
 
   People people;
+  int index;
+  List<People> lista;
 
-  PeopleCard(this.people);
+  PeopleCard(this.people, this.index, this.lista);
 
   @override
   Widget build(BuildContext context) {
@@ -25,8 +28,16 @@ class PeopleCard extends StatelessWidget{
               ),
           ),
           IconButton(
-              icon: Icon(Icons.delete),
-              onPressed: null
+            icon: Icon(Icons.delete),
+
+            onPressed: (){
+              lista.removeAt(index);
+
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context)=> Home())
+              );
+            }
           ),
 
         ],

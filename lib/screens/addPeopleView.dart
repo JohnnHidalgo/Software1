@@ -30,14 +30,20 @@ class _AddPeople extends State<AddPeople> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Register'),
+        title: Text('Register',
+          style: TextStyle(
+            color: Colors.black,
+          ),
+        ),
+        backgroundColor: Colors.white,
+        elevation: 2.0,
       ),
       body: Container(
-        color: Colors.blueGrey,
-
+        color: Colors.white,
+        padding: EdgeInsets.all(16.0),
         child:Column(
           children: <Widget>[
-
+            Padding(padding: EdgeInsets.all(8.0)),
             AddInput(nController,_nvalidate,'Name','Introducir Nombre',Icon(Icons.people)),
             AddInput(nuController,_nuvalidate,'Number','Introducir Numero',Icon(Icons.call)),
             AddButton(lista,nController,nuController,_nvalidate,_nuvalidate),

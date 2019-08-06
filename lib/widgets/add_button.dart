@@ -28,6 +28,8 @@ class _AddButton extends State<AddButton>{
   Widget build(BuildContext context) {
     return Container(
       child: RaisedButton(
+        color: Colors.white,
+          elevation: 0.0,
           child: Text('Add more'),
           onPressed: (){
             setState(() {

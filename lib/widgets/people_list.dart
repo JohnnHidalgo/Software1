@@ -21,13 +21,10 @@ class _PeopleList extends State <PeopleList> {
       height: 600.0,
         child: ListView.builder(
             itemCount: listPeople.length,
-            itemBuilder: (context, int){
-              return PeopleCard(listPeople[int]);
+            itemBuilder: (context, index){
+              return PeopleCard(listPeople[index],index,listPeople);
             }
         )
-
-
     );
   }
-
 }
