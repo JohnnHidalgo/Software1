@@ -1,6 +1,9 @@
 import 'package:basic/models/people.dart';
+import 'package:basic/widgets/peopleList.dart';
 import 'package:basic/widgets/people_card.dart';
 import 'package:flutter/material.dart';
+
+import 'addPeople.dart';
 
 class Home extends StatefulWidget{
   @override
@@ -23,15 +26,20 @@ class _Home extends State<Home>{
       ),
 
       body:Container(
-        child: ListView.builder(
-            itemCount: listPeople.length,
-            itemBuilder: (context, int){
-              return PeopleCard(listPeople[int]);
-            }
-
-        )
-
-      ),
+        child: ListView(
+          children: <Widget>[
+            PeopleList(listPeople),
+            RaisedButton(
+              onPressed: (){
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context)=> AddPeople(listPeople))
+                );
+              },
+            )
+          ],
+        ),
+      )
     );
   }
 }

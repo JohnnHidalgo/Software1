@@ -10,6 +10,7 @@ class PeopleCard extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Container(
+      color: Colors.amberAccent,
       child:Column(
         children: <Widget>[
           Text(people.name),

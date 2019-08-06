@@ -6,7 +6,6 @@ import 'package:flutter/material.dart';
 class AddPeople extends StatefulWidget{
   List<People> lista;
 
-
   AddPeople(this.lista);
 
   @override
@@ -41,8 +40,8 @@ class _AddPeople extends State<AddPeople> {
 
             AddInput(nController,_nvalidate,'Name','Introducir Nombre',Icon(Icons.people)),
             AddInput(nuController,_nuvalidate,'Number','Introducir Numero',Icon(Icons.call)),
-
             AddButton(lista,nController,nuController,_nvalidate,_nuvalidate),
+
           ],
         ),
       ),
