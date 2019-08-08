@@ -45,7 +45,6 @@ class _AddButton extends State<AddButton>{
             Cellcontroller.clear();
             Toast.show("Registro Completado", context, duration: Toast.LENGTH_SHORT, gravity:  Toast.BOTTOM,backgroundColor: Colors.green);
             Navigator.pop(context);
-
           }
         }
       ),

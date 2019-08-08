@@ -1,6 +1,10 @@
 import 'package:basic/models/people.dart';
+import 'package:basic/widgets/add_input.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import 'addPeopleView.dart';
+import 'changePeopleView.dart';
 
 class PeopleView extends StatefulWidget{
   People people;
@@ -19,6 +23,14 @@ class _PeopleView extends State<PeopleView>{
   List<People> lista;
 
   _PeopleView(this.people, this.index, this.lista);
+
+  String inputValue = "";
+  bool _nvalidate = false;
+  TextEditingController nController = new TextEditingController();
+  TextInputType nametextInputType = TextInputType.text;
+  bool _nuvalidate = false;
+  TextEditingController nuController = new TextEditingController();
+  TextInputType calltextInputType = TextInputType.number;
 
   @override
   Widget build(BuildContext context) {
@@ -47,38 +59,54 @@ class _PeopleView extends State<PeopleView>{
               ),
             ),
 
-            CupertinoButton(
-              child: Text('Delete'),
+            Row(
+              children: <Widget>[
+                CupertinoButton(
+                    child: Text('Delete'),
 
-              onPressed:() {
+                    onPressed:() {
 
-                showDialog(
-                  context: context,
-                  child: CupertinoAlertDialog(
-                    title: Text('Estas seguro de eliminar este contacto?'),
-                    content: new Text("This is my content"),
-                    actions: <Widget>[
-                      CupertinoDialogAction(
-                        isDefaultAction: true,
-                        child: Text("Yes"),
-                        onPressed:(){
-                          lista.removeAt(index);
-                          Navigator.pushNamed(context, '/Home');
-                        },
-                      ),
-                      CupertinoDialogAction(
-                        child: Text("No"),
-                        onPressed: (){
-                          Navigator.pop(context);
-                        },
-                      )
-                    ],
-                  ),
-                );
+                      showDialog(
+                        context: context,
+                        child: CupertinoAlertDialog(
+                          title: Text('Estas seguro de eliminar este contacto?'),
+                          content: new Text("This is my content"),
+                          actions: <Widget>[
+                            CupertinoDialogAction(
+                              isDefaultAction: true,
+                              child: Text("Yes"),
+                              onPressed:(){
+                                lista.removeAt(index);
+                                Navigator.pushNamed(context, '/Home');
+                              },
+                            ),
+                            CupertinoDialogAction(
+                              child: Text("No"),
+                              onPressed: (){
+                                Navigator.pop(context);
+                              },
+                            )
+                          ],
+                        ),
+                      );
 
 
-              }
+                    }
+                ),
+                CupertinoButton(
+                    child: Text('Edit'),
+
+                    onPressed:() {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context)=> ChangePeople(lista,index))
+                      );
+                    }
+                ),
+              ],
             ),
+
+
 
           ],
         ),
