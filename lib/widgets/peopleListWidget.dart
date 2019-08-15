@@ -18,7 +18,7 @@ class _PeopleList extends State <PeopleList> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 400.0,
+      height: 600.0,
         child: ListView.builder(
             itemCount: listPeople.length,
             itemBuilder: (context, index){
