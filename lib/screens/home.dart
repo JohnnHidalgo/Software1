@@ -1,6 +1,6 @@
-import 'package:basic/models/people.dart';
-import 'package:basic/widgets/people_add_button.dart';
-import 'package:basic/widgets/people_list.dart';
+import 'package:basic/models/peopleModel.dart';
+import 'package:basic/widgets/addPeopleButtonWidget.dart';
+import 'package:basic/widgets/peopleListWidget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 

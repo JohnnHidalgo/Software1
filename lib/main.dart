@@ -3,7 +3,7 @@ import 'package:basic/screens/home.dart';
 import 'package:basic/screens/peopleView.dart';
 import 'package:flutter/material.dart';
 
-import 'models/people.dart';
+import 'models/peopleModel.dart';
 
 void main() => runApp(MyApp());
 

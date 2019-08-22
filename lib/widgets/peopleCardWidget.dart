@@ -1,4 +1,4 @@
-import 'package:basic/models/people.dart';
+import 'package:basic/models/peopleModel.dart';
 import 'package:basic/screens/home.dart';
 import 'package:basic/screens/peopleView.dart';
 import 'package:flutter/cupertino.dart';

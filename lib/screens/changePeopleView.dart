@@ -1,9 +1,10 @@
-import 'package:basic/models/people.dart';
-import 'package:basic/widgets/add_button.dart';
-import 'package:basic/widgets/add_input.dart';
-import 'package:basic/widgets/change_button.dart';
+import 'package:basic/models/peopleModel.dart';
+import 'package:basic/widgets/addButtonWidget.dart';
+import 'package:basic/widgets/addInputWidget.dart';
+import 'package:basic/widgets/changeButtonWidget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
 
 class ChangePeople extends StatefulWidget{
   List<People> lista;

@@ -1,5 +1,5 @@
-import 'package:basic/models/people.dart';
-import 'package:basic/widgets/people_card.dart';
+import 'package:basic/models/peopleModel.dart';
+import 'package:basic/widgets/peopleCardWidget.dart';
 import 'package:flutter/material.dart';
 
 class PeopleList extends StatefulWidget{
