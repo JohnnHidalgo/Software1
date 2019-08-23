@@ -83,6 +83,7 @@ class PeopleRepositoryServiceDAO{
 
     final sql = '''UPDATE ${CreatePeopleDAO.peopleTable}
     SET ${CreatePeopleDAO.name} = ?
+    AND ${CreatePeopleDAO.number} = ?
     WHERE ${CreatePeopleDAO.id} = ?
     ''';
 
