@@ -19,8 +19,10 @@ class ChangeButton extends StatefulWidget{
 
 class _ChangeButton extends State<ChangeButton>{
   List<People> lista;
+  int id;
   TextEditingController Namecontroller;
   TextEditingController Cellcontroller;
+  bool isDeleted = false;
   bool Namevalidate = false;
   bool Cellvalidate = false;
   int index;
@@ -43,7 +45,7 @@ class _ChangeButton extends State<ChangeButton>{
             }
             else{
               lista.removeAt(index);
-              lista.insert(index,People(Namecontroller.text, Cellcontroller.text));
+              lista.insert(index,People(id, Namecontroller.text, Cellcontroller.text, isDeleted));
 //              lista.add(People(Namecontroller.text, Cellcontroller.text));
               Namecontroller.clear();
               Cellcontroller.clear();

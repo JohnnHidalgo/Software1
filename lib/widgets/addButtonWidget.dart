@@ -1,3 +1,4 @@
+import 'package:basic/dao/peopleRepositoryServiceDAO.dart';
 import 'package:basic/models/peopleModel.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -18,8 +19,10 @@ class AddButton extends StatefulWidget{
 
 class _AddButton extends State<AddButton>{
   List<People> lista;
+  int id;
   TextEditingController Namecontroller;
   TextEditingController Cellcontroller;
+  bool isDeleted = false;
   bool Namevalidate = false;
   bool Cellvalidate = false;
 
@@ -40,7 +43,7 @@ class _AddButton extends State<AddButton>{
             Toast.show("Ingrese Datos por favor", context, duration: Toast.LENGTH_SHORT, gravity:  Toast.BOTTOM);
           }
           else{
-            lista.add(People(Namecontroller.text, Cellcontroller.text));
+            lista.add(People(id, Namecontroller.text, Cellcontroller.text, isDeleted));
             Namecontroller.clear();
             Cellcontroller.clear();
             Toast.show("Registro Completado", context, duration: Toast.LENGTH_SHORT, gravity:  Toast.BOTTOM,backgroundColor: Colors.green);
